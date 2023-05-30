@@ -112,3 +112,12 @@ export const getUser = async (req, res, next) => {
     const posts = await Post.find({"author.username": user.username})
     return res.status(404).json({user: {username, createdAt, name, profile}, posts})
 }
+export const getAllUsers = async (req, res, next) => {
+    const all = await User.find()
+    const users  = []
+    all.map(user => {
+        const {username, profile} = user
+        users.push({username, profile})
+    })
+    return res.json({users})
+}
