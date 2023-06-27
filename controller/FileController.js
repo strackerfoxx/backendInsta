@@ -23,6 +23,7 @@ export const crearArchivo = async (req, res) => {
         if(err){
             console.log("desde 1")
             console.log(err.message)
+            console.log(window.location.pathname)
         }
     })
     const post = new Post()
