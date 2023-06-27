@@ -23,7 +23,9 @@ export const crearArchivo = async (req, res) => {
         if(err){
             console.log("desde 1")
             console.log(err.message)
-            console.log(window.location.pathname)
+            const rutaVercel = window.location.pathname
+            console.log(rutaVercel)
+            return
         }
     })
     const post = new Post()
