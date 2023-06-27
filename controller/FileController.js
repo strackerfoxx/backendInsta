@@ -22,7 +22,7 @@ export const crearArchivo = async (req, res) => {
     upload(req, res, async (err) => {
         if(err){
             console.log("desde 1")
-            return res.json({msg: err.message})
+            res.json({msg: err.message})
         }
     })
     const post = new Post()
